@@ -1,5 +1,5 @@
 # Ex.08 Design of a Standard Calculator
-## Date:
+## Date:12/05/2024
 
 ## AIM:
 To design a web application for a standard calculator with minimum five operations.
@@ -25,8 +25,153 @@ Validate the HTML and CSS code.
 Publish the website in the given URL.
 
 ## PROGRAM :
+NAME:AMEESHA JEFFI J
 
+REF NO:212223220007
+```
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calculator</title>
+        
+        <script>
+        function calculate(args)
+        {
+            res = document.getElementById("result");
+            expression = res.innerText;
+            cmd = args.srcElement.innerText;
+            if(cmd == "=")
+            {
+                expression = "" + eval(expression)
+            }
+            else if(cmd == "C")
+            {
+                expression=""
+            }
+            else if(cmd == "DEL")
+            {
+                expression = expression.slice(0, -1);
+
+            }
+            else if(cmd == "√")
+            {
+                expression = "" + Math.sqrt(eval(expression));
+            }
+            else if(cmd == "%")
+            {
+                expression = expression % 1;
+            }
+            else if(cmd == "log")
+             {
+        expression = Math.log10(expression);
+           }
+       
+            else{
+                expression = expression + cmd;
+            }
+            res.innerText = expression;
+            
+
+        }
+         
+        </script>
+
+        <style>
+          
+            .calculator-container {
+                width: 400px;
+                background-color:rgb(55, 68, 52);
+                margin: 0 auto; 
+                margin-top: 230px;
+                text-align: center;
+                
+            }
+
+           
+            button {
+                width: 50px;
+                height: 50px;
+                margin: 10px; 
+                font-size: 20px; 
+                
+                background-color:brown; 
+                color: white; 
+                border: none;
+            }
+
+          
+            #result {
+                
+       background-color:cyan;
+    text-align: right;
+    padding-right: 50px;
+    font-size: 20px;
+    margin-bottom: 20px; 
+    border: solid black 0.5px;
+    color: black;
+    width: 348px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+            }
+            h1 {
+                padding-top: 10px;
+                color:white;
+                font-size: 50px;
+            }
+            .redd {
+                background-color:rgb(11, 194, 218);
+                color: rgb(195, 14, 14)
+            }
+            .bluee {
+                
+                background-color:rgb(18, 46, 203);
+                color: rgb(218, 188, 188);
+                font-size: 17px;
+            }
+            body {
+                background-color:rgb(255, 47, 47);
+            }
+        </style>
+
+    </head>
+<body>
+    <div class="calculator-container">
+        <h1>AMEESHA JEFFI J</h1>
+        <h2>REGISTER NO=212223220007</h2>
+        <div id="result">0</div>
+        <button onclick="calculate(event);">7</button>
+        <button onclick="calculate(event);">8</button>
+        <button onclick="calculate(event);">9</button>
+        <button class="bluee"  onclick="calculate(event);">/</button>
+        <button class="bluee"  onclick="calculate(event);"> DEL </button><br>
+        <button onclick="calculate(event);">4</button>
+        <button onclick="calculate(event);">5</button>
+        <button onclick="calculate(event);">6</button>
+        <button class="bluee"  onclick="calculate(event);">*</button>
+        <button class="bluee"  onclick="calculate(event);">&radic; </button><br>
+        <button onclick="calculate(event);">1</button>
+        <button onclick="calculate(event);">2</button>
+        <button onclick="calculate(event);">3</button>
+        <button class="bluee"  onclick="calculate(event);">-</button>
+        <button class="bluee"  onclick="calculate(event);">log</button><br>
+        <button onclick="calculate(event);">0</button>
+        <button onclick="calculate(event);">.</button>
+        <button class="redd" onclick="calculate(event);">C</button>
+        <button class="bluee"  onclick="calculate(event);">+</button>
+        <button class="bluee" onclick="calculate(event);">=</button><br>
+    </div>
+    </body>
+</html>
+```
 ## OUTPUT:
+
+![b9167a19-e798-40fc-99b3-afddaf015bda](https://github.com/ameeshajeffi/Calc/assets/150773598/ef590c1a-a15d-4a3f-ba7b-d2aa5bc9eb85)
+
+![47ace733-559e-4f96-adee-0489dc02b2a1](https://github.com/ameeshajeffi/Calc/assets/150773598/78306151-f686-4b0b-9151-08f350fcecb4)
 
 ## RESULT:
 The program for designing a standard calculator using HTML and CSS is executed successfully.
